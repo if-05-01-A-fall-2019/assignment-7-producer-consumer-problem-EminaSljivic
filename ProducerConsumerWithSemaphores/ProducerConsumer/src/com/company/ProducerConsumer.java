@@ -31,8 +31,8 @@ public class ProducerConsumer {
             consumerSemaphore.acquire();
             item = items.remove(items.size() - 1);
             count--;
-            consume(item);
             System.out.format("Consumed! %d \n", item);
+            consume(item);
             producerSemaphore.release();
         }
     }
